@@ -1,8 +1,7 @@
 <template>
   <Layout>
     <div class="divide__between">
-      <h1>Showcase</h1>
-      <g-link class="button" href="https://app.graphcms.com/ca8fb3ba8d4f4a43813027734f669cda/master/content/771b4175eaa447a59fa0d7194dbf3d2a/view/0af105749d234960b22b83a691a449dc"> Add Products </g-link>
+      <img class="banner" src="https://static.vecteezy.com/system/resources/previews/001/349/622/non_2x/bubble-tea-in-milk-splash-advertisement-banner-free-vector.jpg" alt="">  
     </div>
   <div>
     <div v-if="$page.gcms.products" class="product-grid">
@@ -16,7 +15,7 @@
           <g-image v-for="(images, slug) in product.images" class="img" :key="slug" :src="images.url" />   
            <div class="product-content">
           <p class="product-name"> {{ product.name }}</p>
-          <p class="product-price">  &#x20A6;{{ product.price * 10 }}</p>
+          <p class="product-price">  {{ product.price }} THB</p>
         </div>    
         </div>
        
@@ -24,6 +23,19 @@
       </div>
     </div>
   </div>
+     <div class="Marquee-box">
+   <marquee class="MyMarquee" id="my_marquee" direction="left" behavior="9" scrollamount="9" onmouseover="this.stop()" onmouseout="this.start()">
+     <div><img src="https://st4.depositphotos.com/14582236/27572/v/600/depositphotos_275726922-stock-illustration-bubble-milk-tea-ads.jpg" width="160" height="80" alt="marquee image"></div>
+     <div><img src="https://static.vecteezy.com/system/resources/thumbnails/002/033/942/small_2x/bubble-milk-tea-pearl-milk-tea-different-sorts-of-boba-yummy-drinks-free-vector.jpg" width="170" height="80" alt="marquee image"></div>
+     <div><img src="https://as1.ftcdn.net/jpg/03/30/92/17/1000_F_330921791_DIyXT23Pv08s4YT4H4LavprRyW6pFT7I.jpg" width="170" height="80" alt="marquee image"></div>
+     <div><img src="https://media.istockphoto.com/vectors/bubble-tea-banner-ads-vector-id1211684659?b=1&k=6&m=1211684659&s=612x612&w=0&h=ccW5dAIQeOkGNlsLKe5gp8pW_7hfdefPRcB8ga04yOY=" width="170" height="80" alt="marquee image"></div>
+     <div><img src="https://thumbs.dreamstime.com/b/bubble-milk-tea-advertisement-leaves-elements-summer-background-d-illustration-196379871.jpg" width="170" height="80" alt="marquee image"></div>
+     <div><img src="https://i1.wp.com/cupcommunity.com/wp-content/uploads/2020/08/Kim-Cha-Milktea-Station-Banner.jpg?fit=1200%2C523&ssl=1" width="170" height="80" alt="marquee image"></div>
+     <div><img src="https://as2.ftcdn.net/jpg/03/69/21/75/500_F_369217590_HB85JJv1iYxzYQ0peyHsNep0vKbBugP2.jpg" width="170" height="80" alt="marquee image"></div>
+     <div><img src="https://image.shutterstock.com/image-vector/bubble-milk-tea-design-collectionpearl-260nw-1789344620.jpg" width="170" height="80" alt="marquee image"></div>
+     <div><img src="https://static.vecteezy.com/system/resources/thumbnails/002/036/549/small/bubble-milk-tea-pearl-milk-tea-different-sorts-of-boba-yummy-drinks-free-vector.jpg" width="250" height="80" alt="marquee image"></div>
+   </marquee>
+ </div>
   </Layout>
 </template>
 
@@ -112,6 +124,10 @@ export default {
   transition-delay: 500ms;
   object-fit: cover;
 }
+.banner{
+  width: 100%;
+  border-radius: 20px;
+}
 .product-grid{
   display: flex;
   flex-wrap: wrap;
@@ -160,4 +176,36 @@ export default {
      padding-right: 1rem;
   }
 }
+
+.Marquee-box {
+     position: relative;
+     display: inline-block;
+     width: 100%;
+     height: 80px;
+  }
+  .MyMarquee {
+     text-align: center;
+     font-weight: bold;
+     width: 100%;
+     height: 100%;
+     font-size: 25px;
+     padding: 0px 0;
+     color: mediumspringgreen;
+     font-family: Arial, Helvetica, sans-serif;
+     vertical-align: middle;
+     -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+             box-sizing: border-box;
+     background-color: radial-gradient(#15ffa5, #00ced1);
+
+  }
+  .MyMarquee div {
+     display: inline-block;
+     vertical-align: middle;
+  }
+  .MyMarquee a, .MyMarquee img {
+     display: inline-block;
+     text-decoration: underline;
+     vertical-align: middle;
+  }
 </style>

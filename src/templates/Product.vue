@@ -8,7 +8,7 @@
                 <h1> {{ product.name }} </h1>
                 <p > {{ product.description.markdown }} </p>
                 <p>
-                    ${{ product.price}}
+                    {{ product.price}} THB
                 </p>
             </div>
             
