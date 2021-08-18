@@ -17,7 +17,7 @@
     </div>
 
     <div class="botton_position">
-      <g-link class="btn" to="/about/" type="button">Purchase</g-link>
+      <g-link class="btn" to="/Payment/" type="button">Purchase</g-link>
     </div>
   </Layout>
 </template>
