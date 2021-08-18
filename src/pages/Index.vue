@@ -3,8 +3,39 @@
     <div class="divide__between">
       <img class="banner" src="https://static.vecteezy.com/system/resources/previews/001/349/622/non_2x/bubble-tea-in-milk-splash-advertisement-banner-free-vector.jpg" alt="">  
     </div>
+    
+    <div class="priceRange">
+      <button @click="page_1()">1</button>
+  <button @click="page_2()">2</button>
+      <h2>
+        <b-icon icon="sliders"></b-icon>
+        &nbsp;Price range
+      </h2>
+    </div>
+      
+      <div style="text-align: center">
+        <button @click="page_1()">All</button>
+        <button @click="select0_50THB()">0 - 50 Baht</button>
+        <button @click="select51_100THB()">51 - 100 Baht</button>
+        <button @click="select101_150THB()">101 - 150 Bath</button>
+        <button @click="select150THB_grt()">มากกว่า 150 บาท</button>
+    </div>
+    <div class="priceRange">
+      <h2>
+        <b-icon icon="sliders"></b-icon>
+        &nbsp;ประเภทสินค้า
+      </h2>
+    </div>
+    <div style="text-align: center">
+        <button @click="page_1()">All</button>
+        <button @click="Bubbletea()">ชานมไข่มุก</button>
+        <button @click="Extreme()">Extreme</button>
+        <button @click="Icecream()">Ice Cream</button>
+
+    </div>
+
   <div>
-    <div v-if="$page.gcms.products" class="product-grid">
+    <div v-if="$page.page1.products" class="product-grid">
       <div
         v-for="(product) in products"
         :key="product.id"
@@ -40,11 +71,10 @@
 </template>
 
 <script>
-export default {
 
+export default {
   data() {
     return {
-    
       products: [{
         name: '',
         description: {
@@ -62,17 +92,46 @@ export default {
   },
  
  created(){
-  this.products = this.$page.gcms.products
+  this.products = this.$page.page1.products
  },
- 
+ methods:{
+   select0_50THB(){
+     this.products = this.$page.select0_50THB.products
+   },
+   select51_100THB(){
+     this.products = this.$page.select51_100THB.products
+   },
+   select101_150THB(){
+     this.products = this.$page.select101_150THB.products
+   },
+   select150THB_grt(){
+     this.products = this.$page.select150THB_grt.products
+   },
+   Bubbletea(){
+     this.products = this.$page.typebubbletea.products
+   },
+   Extreme(){
+     this.products = this.$page.typeextreme.products
+   },
+   Icecream(){
+     this.products = this.$page.typeicecream.products
+   },
+   page_1(){
+    this.products = this.$page.page1.products
+  },
+  page_2(){
+    this.products = this.$page.page2.products
+  }
+ }
  
 }
 </script>
 
 <page-query>
   {
-    gcms{
-      products {
+
+    page1:gcms{
+      products(first:6,orderBy:price_ASC) {
         id
         name
         description
@@ -86,11 +145,141 @@ export default {
         slug
       }
     }
+
+  page2:gcms{
+      products(skip:6,first:6,orderBy:price_ASC) {
+        id
+        name
+        description
+        categories{
+          name
+        }
+        price
+        images {
+          url
+        }
+        slug
+      }
+    }
+
+    typebubbletea:gcms {
+      products(where: {id_in:["ckdu44mn40gxh010405uwgbtw","ckdu48unc0gzq0158mbzvyzg3","ckdu49mfc0h070102jgprxnj0","ckdu4a79c0h0g0158pqypj0dp"]},orderBy:price_ASC) {
+        id
+        name
+        description
+        categories {
+          name
+        }
+        price
+        images {
+          url
+        }
+        slug
+      }
+    }
+    typeextreme:gcms {
+      products(where: {id_in:["ckdu4awq00h140104ijzi92kv","ckdu4bmyg0h1f0102jk0mwn2g","ckdu4ch1s0h1s01580ksoy6m5","ckrjthdm8a84s0d392skqz7tv","ckrjtlvnka72w0b40pcxlah91","ckrjtonyoa7860c9716cp6nuu"]},orderBy:price_ASC) {
+        id
+        name
+        description
+        categories {
+          name
+        }
+        price
+        images {
+          url
+        }
+        slug
+      }
+    }
+    
+    typeicecream:gcms {
+      products(where: {id_in:["ckrlpbq00f4rv0b40e9q83qpc","ckrlpqkq0fapd0b400qhhalp1"]},orderBy:price_ASC) {
+        id
+        name
+        description
+        categories {
+          name
+        }
+        price
+        images {
+          url
+        }
+        slug
+      }
+    }
+    select0_50THB:gcms {
+      products (where:{ price_lte: 50  },orderBy:price_ASC) {
+        id
+        name
+        description
+        categories {
+          name
+        }
+        price
+        images {
+          url
+        }
+        slug
+      }
+    }
+    select51_100THB:gcms {
+      products (where:{ AND: [{ price_gt: 50 }, { price_lte: 100 }] },orderBy:price_ASC) {
+        id
+        name
+        description
+        categories {
+          name
+        }
+        price
+        images {
+          url
+        }
+        slug
+      }
+    }
+
+    select101_150THB:gcms {
+      products (where:{ AND: [{ price_gt: 100 }, { price_lte: 150 }] },orderBy:price_ASC) {
+        id
+        name
+        description
+        categories {
+          name
+        }
+        price
+        images {
+          url
+        }
+        slug
+      }
+    }
+
+    select150THB_grt:gcms {
+      products (where:{ price_gt: 150},orderBy:price_ASC) {
+        id
+        name
+        description
+        categories {
+          name
+        }
+        price
+        images {
+          url
+        }
+        slug
+      }
+    }
   }
+
+
+
 
 </page-query>
 
 
+
+</page-query>
 <style>
 .divide__between{
   display: flex;
@@ -208,4 +397,15 @@ export default {
      text-decoration: underline;
      vertical-align: middle;
   }
+  .priceRange{
+    text-align: center;
+  }
+  .filterPrice-btn {
+  background-color: #97634e;
+}
+.filterPrice-btn:hover,
+.filterPrice-btn:active,
+.filterPrice-btn:focus {
+  background-color: #6d3a11;
+}
 </style>
