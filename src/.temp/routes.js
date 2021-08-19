@@ -1,8 +1,8 @@
-const c1 = () => import(/* webpackChunkName: "page--src-templates-product-vue" */ "C:\\Users\\ADMIN\\Desktop\\4coe-1\\Ecom_mid\\E-commerce-Gridsome-GraphCMS\\src\\templates\\Product.vue")
-const c2 = () => import(/* webpackChunkName: "page--src-pages-payment-vue" */ "C:\\Users\\ADMIN\\Desktop\\4coe-1\\Ecom_mid\\E-commerce-Gridsome-GraphCMS\\src\\pages\\Payment.vue")
-const c3 = () => import(/* webpackChunkName: "page--src-pages-about-vue" */ "C:\\Users\\ADMIN\\Desktop\\4coe-1\\Ecom_mid\\E-commerce-Gridsome-GraphCMS\\src\\pages\\About.vue")
-const c4 = () => import(/* webpackChunkName: "page--node-modules-gridsome-app-pages-404-vue" */ "C:\\Users\\ADMIN\\Desktop\\4coe-1\\Ecom_mid\\E-commerce-Gridsome-GraphCMS\\node_modules\\gridsome\\app\\pages\\404.vue")
-const c5 = () => import(/* webpackChunkName: "page--src-pages-index-vue" */ "C:\\Users\\ADMIN\\Desktop\\4coe-1\\Ecom_mid\\E-commerce-Gridsome-GraphCMS\\src\\pages\\Index.vue")
+const c1 = () => import(/* webpackChunkName: "page--src-templates-product-vue" */ "F:\\CoE 4 Term 1\\Web Engineering\\gridsome-last-updates\\E-commerce-Gridsome-GraphCMS\\src\\templates\\Product.vue")
+const c2 = () => import(/* webpackChunkName: "page--src-pages-payment-vue" */ "F:\\CoE 4 Term 1\\Web Engineering\\gridsome-last-updates\\E-commerce-Gridsome-GraphCMS\\src\\pages\\Payment.vue")
+const c3 = () => import(/* webpackChunkName: "page--src-pages-about-vue" */ "F:\\CoE 4 Term 1\\Web Engineering\\gridsome-last-updates\\E-commerce-Gridsome-GraphCMS\\src\\pages\\About.vue")
+const c4 = () => import(/* webpackChunkName: "page--node-modules-gridsome-app-pages-404-vue" */ "F:\\CoE 4 Term 1\\Web Engineering\\gridsome-last-updates\\E-commerce-Gridsome-GraphCMS\\node_modules\\gridsome\\app\\pages\\404.vue")
+const c5 = () => import(/* webpackChunkName: "page--src-pages-index-vue" */ "F:\\CoE 4 Term 1\\Web Engineering\\gridsome-last-updates\\E-commerce-Gridsome-GraphCMS\\src\\pages\\Index.vue")
 
 export default [
   {

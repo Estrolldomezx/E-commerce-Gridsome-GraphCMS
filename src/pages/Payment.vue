@@ -1,47 +1,61 @@
 <template>
-<Leyout>
     <div class="header_pay">
-    <h1>ชำระเงินสำเร็จ</h1>
-    <botton class="btn" @click= gohome()>Homepage</botton>
+      <img
+        class="banner"
+        src="https://sellcodes.com/assets/images/Purchase_Success.png"
+      />
+      <h2>Purchase successful !</h2>
+      <botton class="fill" @click="gohome()">Homepage</botton>
     </div>
-    
-</Leyout>
 </template>
 
 <script>
 export default {
-    
-     methods:{
-        gohome(){
-            this.$router.push('/'); 
-      }
-  }
-}
+  methods: {
+    gohome() {
+      this.$router.push("/");
+    },
+  },
+};
 </script>
-      
+
 <style>
-.header_pay{
-    margin-top: 400px;
-    align-items: center;
-    text-align: center;
-    font-size: 36px;
-}
- .btn {
-  -webkit-border-radius: 9;
-  -moz-border-radius: 9;
-   text-align: center;
-    justify-content: center;
-  border-radius: 9px;
-  font-family: Arial;
-  color: #750075;
+.header_pay {
+  margin-top: 10rem;
+  align-items: center;
+  text-align: center;
   font-size: 36px;
-  padding: 10px 30px 10px 30px;
-  border: solid #5828e8 2px;
-
+  width: 40%;
+  margin-left: 35%;
 }
 
-.btn:hover {
-  background: #5828e8;
-  color: #f5f5f5;
+.fill {
+  font-size: 25px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 50px 13px;
+  outline: 0;
+  border: 3px solid white;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.fill::after {
+  content: "";
+  background-color: #66f2d5;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.fill:hover::after {
+  top: 0px;
+  left: 0px;
+  background: #ffe54c;
 }
 </style>
