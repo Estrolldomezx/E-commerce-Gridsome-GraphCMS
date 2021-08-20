@@ -116,7 +116,6 @@ query GetProduct($id: ID) {
   /* position: relative; */
   background-color: rgba(0, 0, 0, 0);
   margin-left: 50rem;
-  
 }
 
 .fill::after {
@@ -165,5 +164,9 @@ query GetProduct($id: ID) {
   top: 0px;
   left: 0px;
   background: #dcbaff;
+}
+
+.button_position {
+  margin-bottom: 10%;
 }
 </style>
