@@ -1,5 +1,5 @@
 <template>
-   <layout>
+   <Layout>
     <div class="header_pay">
       <img
         class="banner"
@@ -8,7 +8,7 @@
       <h2>Purchase successful !</h2>
       <botton class="fill" @click="gohome()">Homepage</botton>
     </div>
-  </layout>
+  </Layout>
 </template>
 
 <script>
