@@ -18,7 +18,7 @@
     </div>
 
     <div class="button_position">
-      <g-link class="fill" to="/payment" type="button">Purchase</g-link>
+      <g-link class="fill" to="/Payment" type="button">Purchase</g-link>
     </div>
   </Layout>
 </template>
@@ -28,7 +28,7 @@
 export default {
   methods: {
     payment() {
-      this.$router.push("/payment");
+      this.$router.push("/Payment");
     },
   },
   data() {
