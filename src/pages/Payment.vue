@@ -1,4 +1,5 @@
 <template>
+   <layout>
     <div class="header_pay">
       <img
         class="banner"
@@ -7,6 +8,7 @@
       <h2>Purchase successful !</h2>
       <botton class="fill" @click="gohome()">Homepage</botton>
     </div>
+  </layout>
 </template>
 
 <script>
@@ -39,6 +41,7 @@ export default {
   cursor: pointer;
   position: relative;
   background-color: rgba(0, 0, 0, 0);
+  margin-bottom: 30px;
 }
 
 .fill::after {
