@@ -1,5 +1,5 @@
 <template>
-  <layout>
+   <layout>
     <div class="header_pay">
       <img
         class="banner"
@@ -42,6 +42,7 @@ export default {
   cursor: pointer;
   position: relative;
   background-color: rgba(0, 0, 0, 0);
+  margin-bottom: 30px;
 }
 
 .fill::after {
