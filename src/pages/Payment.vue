@@ -1,4 +1,5 @@
 <template>
+  <layout>
     <div class="header_pay">
       <img
         class="banner"
@@ -7,6 +8,7 @@
       <h2>Purchase successful !</h2>
       <botton class="fill" @click="gohome()">Homepage</botton>
     </div>
+  </layout>
 </template>
 
 <script>
@@ -21,12 +23,13 @@ export default {
 
 <style>
 .header_pay {
-  margin-top: 10rem;
+  margin-top: 2rem;
   align-items: center;
   text-align: center;
   font-size: 36px;
   width: 40%;
-  margin-left: 35%;
+  margin-left: 30%;
+  margin-bottom: 2rem;
 }
 
 .fill {

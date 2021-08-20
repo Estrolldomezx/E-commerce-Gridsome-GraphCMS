@@ -16,6 +16,8 @@ module.exports = {
         typeName: 'gcmsTypes'
       }
     }
-  ]
+  ],
+  siteUrl: 'https:estrolldomezx.github.io',
+  pathPrefix: '/E-commerce-Gridsome-GraphCMS',
 }
 
