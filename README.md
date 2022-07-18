@@ -1,6 +1,3 @@
-# gridsome-graphcms
-GraphCMS with Gridsome 
-
 # How to install
 
 
